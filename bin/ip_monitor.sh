@@ -1,7 +1,7 @@
 #!/bin/bash
 
 IP_FILE="/tmp/last_ip.txt"
-CURRENT_IP=$(curl -s ifconfig.me)
+CURRENT_IP=$(curl -s -4 ifconfig.me)
 
 if [ -f "$IP_FILE" ]; then
     LAST_IP=$(cat "$IP_FILE")
